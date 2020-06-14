@@ -5,10 +5,11 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *head = *list, *left, *right, *aux1, *aux2;
+	listint_t *head, *left, *right, *aux1, *aux2;
 
 	if (list == NULL || *list == NULL)
 		return;
+	head = *list;
 	while (head != NULL)
 	{right = head, left = head->prev, aux1 = head;
 		while (aux1 && aux1->prev)
@@ -27,9 +28,8 @@ void insertion_sort_list(listint_t **list)
 				}
 				else if (left->prev == NULL)
 				{
-					right->prev = NULL, left->next = right->next;
-					right->next->prev = left, right->next = left;
-					left->prev = right, *list = right;
+					right->prev = NULL, left->next = right->next, right->next->prev = left;
+					right->next = left,	left->prev = right, *list = right;
 				}
 				else
 				{
