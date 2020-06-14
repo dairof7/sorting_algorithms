@@ -1,5 +1,9 @@
 #include "sort.h"
-
+/**
+ * selection_sort - order an array using insertion sort
+ * @array: an array
+ * @size: size of array
+ */
 void selection_sort(int *array, size_t size)
 {
 	unsigned int i, j;

@@ -1,5 +1,8 @@
 #include "sort.h"
-
+/**
+ * insertion_sort_list - order an array using insertion sort
+ * @list: a duble linked list
+ */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *head = *list, *left, *right, *aux1, *aux2;
