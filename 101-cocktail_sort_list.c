@@ -5,16 +5,16 @@
  */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *head, *left, *right, *aux1, *aux2;
+	listint_t *left, *right, *aux1, *aux2;
 	int sw = 1;
 
 	if (list == NULL || *list == NULL)
 		return;
-	head = *list;
+
 	while (sw)
 	{
 		sw = 0;
-		aux1 = head;
+		aux1 = *list;
 		while (aux1 && aux1->next)
 		{
 			right = aux1->next, left = aux1;
