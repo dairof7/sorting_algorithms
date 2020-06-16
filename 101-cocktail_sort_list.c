@@ -28,7 +28,9 @@ void cocktail_sort_list(listint_t **list)
 			aux1 = aux1->next;
 		}
 		aux1 = aux1->prev;
-
+		if (sw == 0)
+			break;
+		sw = 0;
 		while (aux1 && aux1->prev)
 		{
 			left = aux1->prev, right = aux1;
