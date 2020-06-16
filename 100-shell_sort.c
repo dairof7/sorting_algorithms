@@ -6,7 +6,7 @@
  */
 void shell_sort(int *array, size_t size)
 {
-unsigned int interval = 0, i, idx;
+unsigned int interval = 1, i, idx;
 int val_insert;
 
 	if (array == NULL || size < 2)
